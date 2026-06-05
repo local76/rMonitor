@@ -1,59 +1,9 @@
 ```text
-  _____                       _             
- |_   _|___ _ _ ___ _ ___ _ _| |_ _ _____ ___
-   | | | . | | |  _| | . | | | . | | |     |  _|
-   |_| |___|___|_| |_|___|_|_|___|_|_|_|_|_|___|
-                                  D Y N A M I C S
-```
-
-# rMonitor — Rust System Monitor
-
-`rMonitor` is a lightweight, responsive, and high-performance terminal system monitor (TUI) custom-tailored for Windows, built using **Rust** and the **Ratatui** framework.
-
-![rMonitor Screenshot](rmon_icon_256.png)
-
-## 🆕 What's New in v2.0 (Unified Release)
-This release aligns the visual styling, interfaces, and experience of `rMonitor` and `rSaver` under a unified dashboard design system:
-* **Standardized Borders**: Separate bordered blocks for each UI section, removing the outer screen-wide border.
-* **Unified Title Bar**: Standardized header layout displaying `[App Name] │ [user@host] │ [OS & Build]`.
-* **Standard Text Selection**: Restored terminal text selection by disabling raw crossterm mouse capture.
-* **Console Tab Titles**: Sets the active tab title to `"rMon"` on startup and restores it upon exit.
-* **Clean Status Bar**: Bottom status bar has a matching accent-colored `" Status "` border title and clean, bold-colored feedback messages (status light dot removed).
-* **Interactive Status Feedback**: Status bar dynamically reports focus transitions and descriptions when navigating using `Tab`.
-
----
-
-## 🚀 Features
-*   **Compact CPU Metrics:** Displays global CPU usage, logical core counts, and CPU architecture in a compact core grid supporting up to 64+ cores.
-*   **Memory & Swap Mapping:** Shows physical RAM utilization and full Pagefile Swap memory maps.
-*   **Disk Storage Breakdown:** Displays drive formats, partitions, total size, and free/used space.
-*   **Multi-GPU Adaptability:** Dynamically reads all discrete and integrated GPU adapters directly from the Windows Registry.
-*   **Connected Network Sorting:** Checks active network adapters (`Ethernet`, `Wi-Fi`, `Bluetooth`) and displays their connection status (`Plugged` vs `Disconnected`), bubbling active connections to the top of the interface list.
-*   **Unified Process Table:** Lists active process PIDs, Names, CPU%, RAM (MB), Storage (Disk I/O), GPU%, and Network speed (bytes/s).
-*   **Context-Sensitive Sorting:** Dynamically sorts the process list by the resource matching the currently focused panel.
-*   **Neofetch-style Title Banner:** Displays username, hostname, OS version, and kernel build in a compact layout.
-*   **Automatic Resizing:** Auto-resizes the terminal window to a compact 110x38 characters layout upon startup.
-*   **Diagnostics & JSON Snapshots:** Built-in subcommands for system health audits (`--doctor`) and structured snapshots (`--json`).
-
----
-
-## ⌨️ Interface Controls
-*   `Tab` : Cycle focus between panels (CPU, Memory, Storage, GPU, Network).
-*   `↑` / `k` : Move process list cursor up.
-*   `↓` / `j` : Move process list cursor down.
-*   `F9` / `K` / `Delete` : Safely terminate (kill) the selected process (opens confirmation dialog).
-*   `Enter` : View full process details modal.
-*   `Esc` / `q` : Safely exit the application or close active modals/popups.
-
----
-
-## 🩺 Command Line Subcommands
-`rMonitor` can be executed with subcommands directly from your console:
-
-### 1. JSON Data Snapshot (`--json`)
-Dumps all current hardware statistics and network details to standard output in clean JSON format:
-```powershell
-.\rmon.exe --json
+         __  ___            _ __            
+   _____/  |/  /___  ____  (_) /_____  _____
+  / ___/ /|_/ / __ \/ __ \/ / __/ __ \/ ___/
+ / /  / /  / / /_/ / / / / / /_/ /_/ / /    
+/_/  /_/  /_/\____/_/ /_/_/\__/\____/_/     
 ```
 
 ### 2. Doctor Diagnostic System (`--doctor` / `doctor`)

@@ -1,20 +1,11 @@
 ```text
-  _____                       _             
- |_   _|___ _ _ ___ _ ___ _ _| |_ _ _____ ___
-   | | | . | | |  _| | . | | | . | | |     |  _|
-   |_| |___|___|_| |_|___|_|_|___|_|_|_|_|_|___|
-                                  D Y N A M I C S
+         __  ___            _ __            
+   _____/  |/  /___  ____  (_) /_____  _____
+  / ___/ /|_/ / __ \/ __ \/ / __/ __ \/ ___/
+ / /  / /  / / /_/ / / / / / /_/ /_/ / /    
+/_/  /_/  /_/\____/_/ /_/_/\__/\____/_/     
 ```
 
-# Support Guide for `rMonitor`
-
-Thank you for using `rMonitor`! If you run into issues, need assistance, or want to ask questions, please refer to this guide.
-
-## 🩺 Step 1: Run Diagnostics
-Before reporting a bug, please run the built-in diagnostic tool to check if the issue is environment-related (e.g., missing registry keys, restricted terminal size, or network adapter permissions):
-```powershell
-.\rmon.exe --doctor
-```
 This will print an audit report including:
 *   Execution privilege level (Standard vs Elevated)
 *   Registry permissions for CPU theme configs and GPU descriptors
