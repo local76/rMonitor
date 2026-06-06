@@ -18,10 +18,15 @@ use ratatui::{
 };
 use sysinfo::{Disks, Networks, System};
 
-mod reg;
-mod win32;
+mod monitor_win32;
 mod logger;
 mod config;
+
+pub mod win32 {
+    pub use rcommon::win32::*;
+    pub use crate::monitor_win32::*;
+    pub use crate::monitor_win32::{query_power_status, PowerStatus};
+}
 
 use win32::{is_dark_mode, copy_text_to_clipboard, ConsoleTitleGuard, BorderlessConsole, relaunch_in_conhost_if_needed};
 use logger::log_message;
@@ -663,7 +668,7 @@ fn main() -> Result<(), io::Error> {
 
     enable_raw_mode()?;
     let mut stdout = io::stdout();
-    let _ = execute!(stdout, crossterm::terminal::SetSize(110, 38));
+    let _ = execute!(stdout, crossterm::terminal::SetSize(100, 35));
     execute!(stdout, EnterAlternateScreen, EnableMouseCapture)?;
 
     let _borderless = if config.enable_borderless {
