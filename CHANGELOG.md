@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2026.06.09] - 2026-06-09
+## [2026.6.9] - 2026-06-09
 
 ### Renamed
 - **Project rename**: `pulse` was previously `pulse-tui` / `rMonitor`. The Cargo package name, binary name, file paths, registry keys, and docs are now lowercase `pulse`. Behavior and features are unchanged.
