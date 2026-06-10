@@ -9,7 +9,7 @@ use ratatui::{
     widgets::{Block, Borders, Cell, Row, Table},
 };
 use crate::app::{App, FocusedSection, ProcessItem};
-use crate::helpers::format_speed;
+use crate::metrics_format::format_speed;
 
 pub fn render_processes_table(f: &mut Frame, area: Rect, app: &mut App) {
     let theme = &*app.theme;

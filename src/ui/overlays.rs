@@ -9,7 +9,7 @@ use ratatui::{
 };
 
 use crate::app::{App, ProcessDetails};
-use crate::helpers::format_uptime;
+use crate::metrics_format::format_uptime;
 
 pub fn render_status_bar(f: &mut Frame, area: Rect, app: &App) {
     let theme = &*app.theme;

@@ -17,7 +17,7 @@ use library::interface::tui::widgets::{
 };
 
 use crate::app::{App, FocusedSection};
-use crate::helpers::accent_color_from_hex;
+use crate::metrics_format::accent_color_from_hex;
 use crate::backend::current as backend;
 
 const MIN_W: u16 = 100;

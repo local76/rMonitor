@@ -10,7 +10,7 @@ use ratatui::{
     widgets::{Block, Borders, Cell, Paragraph, Row, Table},
 };
 use crate::app::App;
-use crate::helpers::{format_speed, format_total_bytes};
+use crate::metrics_format::{format_speed, format_total_bytes};
 
 pub fn render_cpu_details(f: &mut Frame, area: Rect, app: &App, border_color: Color) {
     let theme = &*app.theme;

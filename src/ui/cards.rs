@@ -10,7 +10,7 @@ use ratatui::{
     widgets::{Block, Borders, Paragraph},
 };
 use crate::app::{App, FocusedSection};
-use crate::helpers::{draw_spring_bar, format_gpu_line, format_speed};
+use crate::metrics_format::{draw_spring_bar, format_gpu_line, format_speed};
 
 pub fn border_color(focus: FocusedSection, is: FocusedSection, accent: Color, border: Color) -> Color {
     if focus == is { accent } else { border }

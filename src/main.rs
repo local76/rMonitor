@@ -16,7 +16,7 @@ mod config;
 mod diagnostics;
 mod docs;
 mod gpu_names;
-mod helpers;
+mod metrics_format;
 mod json;
 mod logger;
 mod network_statuses;
